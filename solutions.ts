@@ -32,8 +32,7 @@ interface Book {
   author: string;
   publishedYear: number;
 }
-// const toggleReadStatus = <T extends Book>(book: T) => {
-const toggleReadStatus = <T extends Book>(book: T) => {
+const toggleReadStatus = (book: Book) => {
   return {
     ...book,
     isRead: true,
