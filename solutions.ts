@@ -3,6 +3,7 @@ const filterEvenNumbers = (numbers: number[]): number[] => {
   return numbers.filter((num) => num % 2 === 0);
 };
 
+
 // 2
 const reverseString = (text: string): string => {
   const reverseText = text.split("").reverse().join("");
@@ -18,6 +19,8 @@ const checkType = (value: StringOrNumber) => {
     return "Number";
   }
 };
+
+
 // 4
 const getProperty = <X>(obj: X, key: keyof X) => {
   return obj[key];
@@ -29,6 +32,7 @@ interface Book {
   author: string;
   publishedYear: number;
 }
+// const toggleReadStatus = <T extends Book>(book: T) => {
 const toggleReadStatus = <T extends Book>(book: T) => {
   return {
     ...book,
